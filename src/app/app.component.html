@@ -2,18 +2,9 @@
 <p>
   Start editing to see some magic happen :)
 </p>
-<div class="container">  
-  <div class="row">  
- <div class="col-xs-12">  
-   <h2>My Servers</h2>  
-   <button class="btn btn-primary" (click)="OnAddServer()">Add Server</button>  
- <br><br>  
-  
- <ul class="list-group">  
-   <li  
-   class="list-group-item "  
-   *ngFor="let server of servers; let i = index"  
-   (click)="onRemoveServer(i)">{{ server }}  
-   </li>  
- </ul> </div>  
- </div>  
+<span *ngIf ="isavilable ;then condition1 else condition2" >
+  condition is valid
+</span>
+<ng-template #condition1 is valid>condition is valid from template </ng-template>
+
+<ng-template #condition2 is valid>condition is invalid from template </ng-template>
